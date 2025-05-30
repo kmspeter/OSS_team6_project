@@ -21,7 +21,7 @@
 
 ## 🖼️ 스크린샷 (Screenshots)
 
-> 📷 작업 예시, PR 충돌 상황, 태그 생성 화면 등을 여기에 첨부하세요.  
+> 📷 작업 예시, PR 충돌 상황, 태그 생성 화면 등을 여기에 첨부예정입니다.  
 > 예: `pull_request_conflict_example.png`, `milestone_overview.png` 등
 
 ---
@@ -30,8 +30,8 @@
 
 ```bash
 # 저장소 클론
-git clone https://github.com/your-team/openbook-project.git
-cd openbook-project
+git clone https://github.com/kmspeter/OSS_team6_project.git
+cd OSS_team6_project.git
 ```
 
 ---
@@ -39,7 +39,7 @@ cd openbook-project
 ## 🚀 사용법 (Usage)
 
 ```bash
-# 브랜치 생성
+# 브랜치 생성 및 변경
 git switch -c feature/booklist-KW
 
 # 텍스트 문서 작업
@@ -61,18 +61,24 @@ git push origin feature/booklist-KW
 
 - **브랜치 네이밍**: `type/파일명-작업자이니셜` (예: `feature/booklist-KW`)
 - **커밋 메시지 형식**:  
-  ```
-  [제목: 50자 이내 요약]
+- 한 줄 커밋
+```
+[제목]:[내용](Resolves: #이슈번호)
+```
 
-  본문: 문제의 원인, 해결 방법, 추가적인 변경 사항 기술
-  Resolves: #이슈번호
-  ```
-- **PR 작성 규칙**:
-  - 제목: `[파일명] 주요 작업 요약`
-  - 본문: 변경사항 요약, 연결 이슈 번호, 작업 배경
-  - 충돌 해결 시 상세한 해결 내용 포함
-- **병합 기준**: 과반수 리뷰 승인 시 병합 가능
-- **모든 PR은 이슈와 마일스톤에 연결 필수**
+```
+[제목: 50자 이내 요약]  
+
+본문: 문제의 원인, 해결 방법, 추가적인 변경 사항 기술  
+Resolves: #이슈번호
+```
+
+- **작성 원칙**
+- 제목 첫 글자는 대문자로 시작, 마침표 X
+- **명령형** 사용 (예: "Add", "Fix", "Refactor" 등)
+- 한 커밋은 한 작업 목적만 포함
+- 커밋 내용이 분명할 시, 한 줄 커밋을 주로 사용
+- 본문 작성 시, 본문에서는 **무엇을**, **왜**, **어떻게** 수정했는지를 기술
 
 📄 자세한 협업 규칙은 [`team_rules.md`](./team_rules.md)를 참고하세요.
 
@@ -101,7 +107,7 @@ git push origin feature/booklist-KW
 
 ## 📌 마일스톤 / 이슈 관리
 
-- 마일스톤: `v1.0.0` (최종 병합 목표)
+- 마일스톤: OSS 도서 소개 프로젝트 완성
 - 이슈 템플릿 사용 권장
 - 라벨 예시: `documentation`, `enhancement`, `bug`, `question`
 - 모든 PR은 반드시 이슈 및 마일스톤에 연결되어야 함
@@ -113,7 +119,7 @@ git push origin feature/booklist-KW
 - 병합 완료 후 태그 생성
 ```bash
 git tag v1.0.0
-git push origin v1.0.0
+git push origin --tags
 ```
 
 ---
